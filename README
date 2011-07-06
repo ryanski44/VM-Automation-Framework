@@ -1,0 +1,130 @@
+VM Automation Framework (VMAF)
+
+The idea behind the system is that it is responsible for taking packages, scripts, tests, etc and running it on a VM, and then capturing the results of the execution.  The system is capable of handling more than one job at once and queing jobs that require the same VM.  The packages are .NET assemblies that conforms to an interface, which is defined in JobManagerInterfaces.  
+
+You can code whatever you want in the package.  It could install your software for you, do simple scripting tasks, run nunit tests, etc.
+
+***********
+Definitions
+***********
+
+Executable Package – A set of executable and support files, one of which is the main .NET assembly that contains a class that implements the interface JobManagerInterfaces.JobRunner.
+
+Job – Represents a job to be performed on a VM.  The job includes a list of executable packages, a target VM Configuration, a set of ISO files (optional), and a set of properties (key/value pairs)
+
+VM – Virtual Machine
+
+VM Configuration – A specific OS/Application configuration.  One or more VMs may represent this configuration, or a specific snapshot on a VM may represent this configuration.
+
+Messages – Inter-process communication between the components of VMAF is implemented via messages.  The messages are implemented as files that are read from and written to network shares.
+
+********
+Features
+********
+
+The automation framework can take an executable definition, run it on VM(s), and return the results of the execution.
+
+The framework operates with .NET assemblies that conform to a specific method definition as defined in an interface definition provided by the framework, hearafter known as the "interface".  These .NET assemblies and any files they are dependent on shall be known as a "executable package".
+
+A job is a combination of executable packages, a target VM configuration, ISO files (optional), and a set of properties that the executable package can access at runtime.
+
+The framework makes the executable package and ISO file available locally on the VM.
+
+The interface provides access to the locations of the test package and the ISO.
+
+The interface provides access to the property values by key.
+
+The interface provides a method that can mount a specified ISO as a CD on the VM.
+
+The interface provides a logging mechanism.
+
+The framework works with VMs running on VMWare ESX version 4, or vSphere version 4.
+
+The list of VM Configurations is configurable.
+
+The framework allows a job to be created via a command line program.  This program outputs the results of the job as files when it completes.
+
+The framework facilitates running jobs and returning the results of jobs to the requestor of the job.
+
+The framework can handle more than one job at once.
+
+Only one job will be allowed to run on the same VM at once. The framework will queue up other jobs that require the same VM until the VM is available again.
+
+*******************
+Components/Projects
+*******************
+
+JobManagerInterfaces - Used by all the projects and is the only project that executable packages need to reference.  It holds the interface definitions that other projects use, as well as some shared helper methods.
+
+JobManagerConsole - Intended to run locally on build machine, is executed via a command line.  Arguments are the job collection xml file describing the jobs to be run, a build directory to use to fill in build relative paths, and an optional result directory to copy the job results to.  It communicates with the JobManagerService.  It sends the requested job to the server and waits until the job is finished.  When the job is finished it copies the results to files and closes with an exit code.  This assembly is meant to be called from a continuous integration environment like cruise control or TFS. 
+
+JobManagerService - This is the main program and runs as a service.  It listens for multiple types of messages.  It receives job creation messages from JobManagerClient.  It then runs the job which involves starting the requested VM (and reverting to a snapshot), and then waiting for JobManagerClient to send it a message, at which point it replies with the executable .net test package that needs to run.  It then waits for JobManagerClient to send it a job finished message at which point it sends a message back to JobManagerConsole (the original requestor) with the results of the tests. 
+
+JobManagerClient - This is intended to run under the VM guest OS.   It is meant to be called on startup with the help of VMAutoPrep.  When JobManagerClient starts it contacts the JobManagerService requesting jobs.  If there are jobs available for this OS JobManagerService will send the .net test package to JobManagerClient.  JobManagerClient then invokes the test package, and returns the results of the tests to JobManagerService. 
+
+VMAutoPrep & VmAutoPrepInstallHelper - This is an install package that one can use to setup a VM to be configured with JobManagerClient.  It prepares the system (i.e. turning on autologin, copying some bootstrap scripts, and seting up the scripts to run on login. 
+
+JobManagerMonitor - This is a GUI program that you can run from any machine that connects to the JobManagerService and displays the jobs that it is keeping track of.  It also lets a user delete jobs.
+
+JobManagerServiceInstall - Project that creates the installation for JobManagerService.
+
+JMServiceConsole - Project that wraps the service into a command line console application.  Useful when you don't want to install the service.
+
+
+*******************
+How to Deploy & Use
+*******************
+
+1.	Create Windows File Shares on a file server that is accessible to all machines.  Create the following shares:
+-	inbox (for message exchange between programs)
+-	outbox (for message exchange between programs)
+-	FileDrop (for temporarily holding the ISOs and test files)
+-	client (for holding the latest built version of JobManagerClient)
+2.	Build All Projects, make sure hardcoded settings in the projects point to the correct shares before building. Most of these settings are in AppConfig.cs files.  The "client" path needs to be configured in automation.bat in the VMAutoPrep project.
+3.	For true deployment the service would be installed on a server, & JobManagerConsole would be installed on the build machines.  For testing these can be run from the development environment.
+4.	Create a vm_list.txt file in the binary directory of JMServiceConsole.  This is a csv file that maps operating system configurations to VMs on vsphere.  The file format is configuration id, path on vsphere, hostname of machine.  Here is an example:
+
+WinXP_32, DataCenter/vm/Testing/VS-XP-PRO-SP3-IE7-x86, VS-XP-PRO-SP3-I
+
+The configuration id, in this case WinXP_32, is the string that is used when requesting a job for a configuration (step 8).
+
+5.	On the VM(s) that will be used you need to install VMAutoPrep onto these VMs, shut them down and then take a snapshot.  The automation will revert to this snapshot before running tests.
+
+6.	You need to deploy JobManagerClient to the "client" share that was created earlier.  Just copy the build output for JobManagerClient to this share.
+
+7.	7a. Make sure the machine that the service is going to run on has VMWare VIX installed.
+7b. Start the service.  If running from the development environment just start JMServiceConsole.exe
+
+8.	Give the system a job by invoking JobManagerConsole.  You need to pass in the test project for your specific needs.  Here is an example for a flagstaff test project:
+
+JobManagerConsole.exe WinXP_32 "\\ryanadams2\hc\40-00071-03.HeartCentrix.6.2.3914.1604.Install.iso" \\radams-fs-7\FlagstaffAuto VMAutomationTestRunner.dll VMAutomationTestRunner.FlagstaffRunner
+
+
+*************************************************
+How JobManagerClient & batch files work on the VM
+*************************************************
+
+VMAutoPrep creates a folder for automation files at C:\CSCAutomation and copies the following files:
+•	automation.bat - a batch file that pulls down JobManagerClient from a network share and launches JobManagerClient
+•	run_once_automation.reg - a registry file that contains a runonce registry value that launches automation.bat
+•	setup_magicdisc.exe - the setup exe for magic disc.  VMAutoPrep uses this to install magic disc.  magic disc is used by the framework to mount CDs.
+•	setup_magicdiscx64.exe - a x64 setup for magic disc
+•	Wait.exe - a utility program that launches a specified file only after all windows services have initialized.  The startup entry that run_once_automation.reg sets ends up calling this to launch automation.bat only after windows services have initialized.
+
+Timeline:
+1.	VMAutoPrep is installed on the VM.  It will populate the runonce registry setting when it first installs.  This can also be done manually by running run_once_automation.
+2.	VM is shutdown and snapshoted manually
+3.	When a job for this VM is started, JobManagerService reverts to the snapshot and starts the VM
+4.	On startup the VM automatically logs in because VMAutoPrep created a windows user "Testing" and has set autologin.
+5.	The runonce registry entry gets executed, Wait.exe runs and waits for services to finish, then it runs automation.bat
+6.	automation.bat connects to the network share and downloads JobManagerClient, and then runs JobManagerClient.
+7.	JobManagerClient runs and asks JobManagerService for jobs.
+8.	JobManagerService returns the job, and JobManagerClient executes it.
+9.	When the job is finished a JobResult object is returned and JobManagerClient sends this to JobManagerService.
+
+Lifecycle of JobManagerClient
+•	When started fresh it will send a message to JobManagerService requesting jobs.
+•	If no jobs are found, JobManagerClient will report this and then do nothing.
+•	If a job is found it will be executed.
+•	If the job that is being executed requests to be started after a reboot (typical during an install automation) then JobManagerClient will write out the current job information to a text file job.xml in the same folder and will also create a startup entry for itself.
+•	When the computer is restarted JobManagerClient will start and it will read the job.xml file instead of requesting the job from JobManagerService.
