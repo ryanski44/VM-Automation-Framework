@@ -8,15 +8,15 @@ You can code whatever you want in the package.  It could install your software f
 Definitions
 ***********
 
-Executable Package – A set of executable and support files, one of which is the main .NET assembly that contains a class that implements the interface JobManagerInterfaces.JobRunner.
+Executable Package - A set of executable and support files, one of which is the main .NET assembly that contains a class that implements the interface JobManagerInterfaces.JobRunner.
 
-Job – Represents a job to be performed on a VM.  The job includes a list of executable packages, a target VM Configuration, a set of ISO files (optional), and a set of properties (key/value pairs)
+Job - Represents a job to be performed on a VM.  The job includes a list of executable packages, a target VM Configuration, a set of ISO files (optional), and a set of properties (key/value pairs)
 
-VM – Virtual Machine
+VM - Virtual Machine
 
-VM Configuration – A specific OS/Application configuration.  One or more VMs may represent this configuration, or a specific snapshot on a VM may represent this configuration.
+VM Configuration - A specific OS/Application configuration.  One or more VMs may represent this configuration, or a specific snapshot on a VM may represent this configuration.
 
-Messages – Inter-process communication between the components of VMAF is implemented via messages.  The messages are implemented as files that are read from and written to network shares.
+Messages - Inter-process communication between the components of VMAF is implemented via messages.  The messages are implemented as files that are read from and written to network shares.
 
 ********
 Features
@@ -105,11 +105,16 @@ How JobManagerClient & batch files work on the VM
 *************************************************
 
 VMAutoPrep creates a folder for automation files at C:\CSCAutomation and copies the following files:
-•	automation.bat - a batch file that pulls down JobManagerClient from a network share and launches JobManagerClient
-•	run_once_automation.reg - a registry file that contains a runonce registry value that launches automation.bat
-•	setup_magicdisc.exe - the setup exe for magic disc.  VMAutoPrep uses this to install magic disc.  magic disc is used by the framework to mount CDs.
-•	setup_magicdiscx64.exe - a x64 setup for magic disc
-•	Wait.exe - a utility program that launches a specified file only after all windows services have initialized.  The startup entry that run_once_automation.reg sets ends up calling this to launch automation.bat only after windows services have initialized.
+
+automation.bat - a batch file that pulls down JobManagerClient from a network share and launches JobManagerClient
+
+run_once_automation.reg - a registry file that contains a runonce registry value that launches automation.bat
+
+setup_magicdisc.exe - the setup exe for magic disc.  VMAutoPrep uses this to install magic disc.  magic disc is used by the framework to mount CDs.
+
+setup_magicdiscx64.exe - a x64 setup for magic disc
+
+Wait.exe - a utility program that launches a specified file only after all windows services have initialized.  The startup entry that  run_once_automation.reg sets ends up calling this to launch automation.bat only after windows services have initialized.
 
 Timeline:
 1.	VMAutoPrep is installed on the VM.  It will populate the runonce registry setting when it first installs.  This can also be done manually by running run_once_automation.
@@ -123,8 +128,9 @@ Timeline:
 9.	When the job is finished a JobResult object is returned and JobManagerClient sends this to JobManagerService.
 
 Lifecycle of JobManagerClient
-•	When started fresh it will send a message to JobManagerService requesting jobs.
-•	If no jobs are found, JobManagerClient will report this and then do nothing.
-•	If a job is found it will be executed.
-•	If the job that is being executed requests to be started after a reboot (typical during an install automation) then JobManagerClient will write out the current job information to a text file job.xml in the same folder and will also create a startup entry for itself.
-•	When the computer is restarted JobManagerClient will start and it will read the job.xml file instead of requesting the job from JobManagerService.
+
+When started fresh it will send a message to JobManagerService requesting jobs.
+If no jobs are found, JobManagerClient will report this and then do nothing.
+If a job is found it will be executed.
+If the job that is being executed requests to be started after a reboot (typical during an install automation) then JobManagerClient will write out the current job information to a text file job.xml in the same folder and will also create a startup entry for itself.
+When the computer is restarted JobManagerClient will start and it will read the job.xml file instead of requesting the job from JobManagerService.
