@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://www.rbadams.com/Automation/Job"
+    elementFormDefault="qualified" 
+    xmlns:tns="http://www.rbadams.com/Automation/Job">
+    <xs:complexType name="Job">
+        <xs:all minOccurs="1">
+            <xs:element name="Configurations">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Configuration" minOccurs="1" maxOccurs="unbounded">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:minLength value="1" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ISOs">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ISO" minOccurs="0" maxOccurs="unbounded" >
+                            <xs:complexType>
+                                <xs:attribute name="Key" type="xs:string" use="required">
+                                    <xs:annotation>
+                                        <xs:documentation xml:lang="en">A unique name for the ISO to be used by the executable package.</xs:documentation>
+                                    </xs:annotation>
+                                </xs:attribute>
+                                <xs:attribute name="Target" type="xs:string" use="required" />
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ExecutableSequence" type="xs:string" />
+            <xs:element name="Properties">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Property" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:attribute name="Key" type="xs:string" use="required"/>
+                                <xs:attribute name="Value" type="xs:string" use="required"/>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:all>
+    </xs:complexType>
+    <xs:element name="Job" type="tns:Job"/>
+</xs:schema>

@@ -104,7 +104,7 @@ JobManagerConsole.exe WinXP_32 "\\ryanadams2\hc\40-00071-03.HeartCentrix.6.2.391
 How JobManagerClient & batch files work on the VM
 *************************************************
 
-VMAutoPrep creates a folder for automation files at C:\CSCAutomation and copies the following files:
+VMAutoPrep creates a folder for automation files at C:\Automation and copies the following files:
 
 automation.bat - a batch file that pulls down JobManagerClient from a network share and launches JobManagerClient
 

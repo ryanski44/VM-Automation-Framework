@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://www.rbadams.com/Automation/ISO"
+    elementFormDefault="qualified" 
+    xmlns:tns="http://www.rbadams.com/Automation/ISO">
+    <xs:complexType name="ISO">
+        <xs:attribute name="Path" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">A Path to an ISO image to be included as a file with the job.</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="PathType" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="BuildRelative"/>
+                    <xs:enumeration value="Absolute"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:element name="ISO" type="tns:ISO"></xs:element>
+</xs:schema>

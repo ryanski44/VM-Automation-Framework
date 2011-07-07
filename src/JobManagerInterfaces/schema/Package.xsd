@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://www.rbadams.com/Automation/Package"
+    elementFormDefault="qualified" 
+    xmlns:tns="http://www.rbadams.com/Automation/Package">
+    
+    <xs:complexType name="PathT">
+        <xs:attribute name="Path" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                <xs:minLength value="1" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="PathType" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="BuildRelative"/>
+                    <xs:enumeration value="Absolute"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="Name" use="optional">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:minLength value="1" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    
+        <xs:complexType name="Package">
+            <xs:all>
+                <xs:element name="MainDirectory" type="tns:PathT"/>
+                <xs:element name="AdditionalSubDirectories" >
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="SubDirectory" type="tns:PathT" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="DLLFileName">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="1" />
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="JobRunnerClassName">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="1" />
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="RequiredJobProperties">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="PropertyName" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Properties">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Property" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="Key" type="xs:string" use="required"/>
+                                    <xs:attribute name="Value" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="RequiredISOs">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISOName" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+    <xs:element name="Package" type="tns:Package" />
+</xs:schema>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://www.rbadams.com/Automation/Sequence"
+    elementFormDefault="qualified" 
+    xmlns:tns="http://www.rbadams.com/Automation/Sequence">
+<xs:complexType name="Sequence">
+    <xs:sequence>
+        <xs:element name="Package" type="xs:string"  minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+</xs:complexType>
+    <xs:element name="Sequence" type="tns:Sequence"></xs:element>
+</xs:schema>

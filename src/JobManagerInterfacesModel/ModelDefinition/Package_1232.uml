@@ -1,0 +1,925 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="10dd02b8-4aa2-410f-9466-4cd5ff4e1bf7"
+  name="JobManagerInterfaces"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="2927b9b1-2e42-4136-b5ff-937e26a09a5f"
+      handle="viewcode://./CodeSchema_Namespace?Namespace=JobManagerInterfaces"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="a3fc14db-0979-4ef0-b686-669b9601e92c"
+        name="JobCollectionSet"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="da3c7d82-e40a-4c9c-a88a-dfc1567af1e9"
+            handle="viewcode://./CodeSchema_Class?Assembly=file:///C:/src/Flagstaff/Dev/Dev-B/Src/Tools/VMAutomationFramework/JobManagerInterfaces/bin/Debug/JobManagerInterfaces.dll Namespace=JobManagerInterfaces Type=JobCollectionSet"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7bc7f119-8026-41e5-9e1a-4b484d64ba79"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7465f821-7391-4107-a365-6dca1f047989">
+                <propertyInstance
+                  Id="b5c01226-3cf0-4611-9409-464664f3c7f3"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c01e0dea-ab7f-4d27-b25b-95e88db0db94">
+                <propertyInstance
+                  Id="a8618d7d-da75-4faf-8f42-e4a8de1d58ad"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="976fee6a-dcc9-4c7f-90ea-20ff0adfd242">
+                <propertyInstance
+                  Id="e95c91ee-9e4d-4695-a34b-8914c355571e"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9fa2e110-8091-4bd7-8d76-64cf15f02e71">
+                <propertyInstance
+                  Id="b9adcf72-c9e9-4e0c-8a87-bd721a4c2d37"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c99df95f-99a0-47bd-a2f1-978c6053d650">
+                <propertyInstance
+                  Id="dae1350d-34e7-44a2-9d3f-0f0153a6b9a3"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="48cdb67d-af31-4f63-95ee-1a8c1ce383bc"
+            name="configMap"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="5906504f-4433-416a-956b-422087305815"
+                handle="viewcode://./CodeSchema_Field?Assembly=file:///C:/src/Flagstaff/Dev/Dev-B/Src/Tools/VMAutomationFramework/JobManagerInterfaces/bin/Debug/JobManagerInterfaces.dll Namespace=JobManagerInterfaces Type=JobCollectionSet Member=configMap"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b0793c7c-4892-4a29-98a4-e9fde0b1b94b"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="593ff316-6164-49e3-908d-d60a3bd8bd10">
+                    <propertyInstance
+                      Id="411a8fe1-83c6-408e-9d0a-a868effbeee3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6e42d0ce-843e-4c32-8cc8-c99ba892cbd1">
+                    <propertyInstance
+                      Id="a407fa28-ad00-4ac6-b703-7b21ad880954"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04d9899f-c060-4f41-b475-fa28361a6988">
+                    <propertyInstance
+                      Id="1da8d8ce-34b1-4687-87b7-a5cf3662e94d"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="59039567-869a-43f7-a570-babbfa75b98f">
+                    <propertyInstance
+                      Id="1bbc729a-fdc7-4220-97f3-5190e97e0310"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="36dd3053-6c16-44e2-8810-cd5db213fa99">
+                    <propertyInstance
+                      Id="f38d45d3-855a-45fb-94b2-78ab7921e795"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="1e4d749f-c71b-469a-ab4b-0c8c5ebed8cd"
+                LastKnownName="Dictionary&lt;String,ConfigurationType&gt;"
+                LastKnownLocation="Package4_1232.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="7f5de5cc-e3c6-488a-ba99-648c9cd26622"
+            name="isoMap"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="1f672f44-f80b-4b51-92a8-7d3b239076a1"
+                handle="viewcode://./CodeSchema_Field?Assembly=file:///C:/src/Flagstaff/Dev/Dev-B/Src/Tools/VMAutomationFramework/JobManagerInterfaces/bin/Debug/JobManagerInterfaces.dll Namespace=JobManagerInterfaces Type=JobCollectionSet Member=isoMap"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7f2f2e87-dfa5-464e-be85-ff27994a14f2"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b7dd8224-9ccf-4849-9065-c5af13ef7512">
+                    <propertyInstance
+                      Id="9045b01b-7027-4bcb-8703-0fdb3d3f31ef"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b7259a9-e51d-4090-8414-1f0aa36b393c">
+                    <propertyInstance
+                      Id="3e059df4-c0fb-4d5a-b7c9-a167fcd21c5a"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e7de3f3f-8b9f-415d-8291-745b30efe710">
+                    <propertyInstance
+                      Id="41a64d35-4af6-4ee3-be65-fd13c461fd81"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e9b8c13-e67a-4523-9253-f41dce1c0501">
+                    <propertyInstance
+                      Id="12f27c3f-6c63-476a-b109-fdd241948821"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e316120-4b2c-43fe-a240-13182da26109">
+                    <propertyInstance
+                      Id="ca284a63-7309-405b-b494-3667462336d8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="cec6f28f-cbf5-475a-b86b-574e617e8606"
+                LastKnownName="Dictionary&lt;String,ISO&gt;"
+                LastKnownLocation="Package4_1232.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="eb153c7e-be95-4331-81d3-1c60afd74eeb"
+            name="jobCollections"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="604661b0-271f-4a9e-b095-d08dd08c4d00"
+                handle="viewcode://./CodeSchema_Field?Assembly=file:///C:/src/Flagstaff/Dev/Dev-B/Src/Tools/VMAutomationFramework/JobManagerInterfaces/bin/Debug/JobManagerInterfaces.dll Namespace=JobManagerInterfaces Type=JobCollectionSet Member=jobCollections"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="911fb8f1-7200-4560-b560-0a38c37740f4"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2cee5748-363a-499b-b160-f5af9017ce7e">
+                    <propertyInstance
+                      Id="bd8079b2-b002-434f-8b71-42068caf978a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d24aa120-f8a9-4987-b778-1f25ddf1161f">
+                    <propertyInstance
+                      Id="9301b4ac-a4e0-48c7-b334-2ab4eb718861"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ffd93171-34a3-47f5-80ee-86462b125913">
+                    <propertyInstance
+                      Id="533092fe-77ba-4bc1-8339-1dadb194502d"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc950cf3-6769-4b55-9921-6d27b6b14b72">
+                    <propertyInstance
+                      Id="7d6e8d98-74c3-45e3-b71f-8c4027c97d92"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="461b79af-ce14-4eba-99bd-d6b6a5549a2e">
+                    <propertyInstance
+                      Id="91e695c0-09db-4d87-8faa-036bb856fc30"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="45380924-31b7-426a-9c7f-564fe7bc4b2e"
+                LastKnownName="List&lt;JobCollection&gt;"
+                LastKnownLocation="Package4_1232.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="be1575e8-5ff7-452a-90ef-14b3aeb16a99"
+            name="jobMap"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="409ccbf6-ea90-4748-bf8a-db9c13046be9"
+                handle="viewcode://./CodeSchema_Field?Assembly=file:///C:/src/Flagstaff/Dev/Dev-B/Src/Tools/VMAutomationFramework/JobManagerInterfaces/bin/Debug/JobManagerInterfaces.dll Namespace=JobManagerInterfaces Type=JobCollectionSet Member=jobMap"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3e22fcd4-4571-48a9-b7f1-bb85d2ff580d"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a023e8c8-b3b2-4922-b980-dc0a8df52bca">
+                    <propertyInstance
+                      Id="15d5106f-6fdb-414a-85bb-d5812c70d108"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62814eaf-4cd7-4441-b8b9-61faaecd11b7">
+                    <propertyInstance
+                      Id="f006ec86-d1b0-4d88-8ab9-d09629dc3ee2"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="241341b4-cf65-407b-972d-005173584f20">
+                    <propertyInstance
+                      Id="bcea8dc0-712e-48d4-8757-5ee86055436f"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a0cff02b-245a-4bc0-b177-a4d59f3c28c6">
+                    <propertyInstance
+                      Id="1d44ffc7-1845-48ad-8c28-f77c799dd35d"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3d22c229-05d1-423a-a8df-863c6b2d8a59">
+                    <propertyInstance
+                      Id="5585adab-b9da-4f01-a077-efaf91d2725d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="f8f395c5-1f68-4568-ae26-dce849894733"
+                LastKnownName="Dictionary&lt;String,Job&gt;"
+                LastKnownLocation="Package4_1232.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f60e4d2f-b824-4b0d-95d8-88790663ef02"
+            name="packageMap"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="f4ab5edd-28fe-4e78-8e53-73a641344c05"
+                handle="viewcode://./CodeSchema_Field?Assembly=file:///C:/src/Flagstaff/Dev/Dev-B/Src/Tools/VMAutomationFramework/JobManagerInterfaces/bin/Debug/JobManagerInterfaces.dll Namespace=JobManagerInterfaces Type=JobCollectionSet Member=packageMap"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="548df23a-2fb1-45c4-ae9c-e238e992a547"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c667e252-4399-4419-904f-8f239baeb02d">
+                    <propertyInstance
+                      Id="6ce30822-79a1-4a15-a300-f6b3d0c1636b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c4d18339-0f41-421c-ad2f-9bb454917367">
+                    <propertyInstance
+                      Id="0f668e28-c01b-4c7f-aa25-d131522dffeb"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="197951ed-8cc4-443f-b6d2-a5971b47b8b4">
+                    <propertyInstance
+                      Id="a18c9072-55f0-4b7c-8412-21255457e5be"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d4993bd3-0270-4c44-92fe-ecfe0f259579">
+                    <propertyInstance
+                      Id="a0d9c522-3d6c-4aaa-bba6-efe57e1edee8"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="41f71aa3-f3dd-466e-bd4c-a62e6a9fddd7">
+                    <propertyInstance
+                      Id="ac769b59-ff35-47da-b900-760aa34f109f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="b277d81d-3283-452e-b2cf-daf8b52f99e0"
+                LastKnownName="Dictionary&lt;String,Package&gt;"
+                LastKnownLocation="Package4_1232.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="db1c4ac3-5032-4430-9ae5-e909bac86d01"
+            name="sequenceMap"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="1e382a84-1b7d-496d-b90a-9dd0b5b60386"
+                handle="viewcode://./CodeSchema_Field?Assembly=file:///C:/src/Flagstaff/Dev/Dev-B/Src/Tools/VMAutomationFramework/JobManagerInterfaces/bin/Debug/JobManagerInterfaces.dll Namespace=JobManagerInterfaces Type=JobCollectionSet Member=sequenceMap"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="197928df-e76f-4317-a42c-e77bcfddc0ab"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f4419405-86ab-4a7d-8d5d-d6f578a1a5b9">
+                    <propertyInstance
+                      Id="91e1b3cd-8e8b-4ccb-8160-32b4ffe07d05"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33bbc059-2f87-4335-903e-c8860e336054">
+                    <propertyInstance
+                      Id="e2832930-d3d9-4797-9d94-a4e1739c887f"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="db4d1493-4ac0-413e-a6d0-e343da100ee8">
+                    <propertyInstance
+                      Id="37b09502-b44a-4259-af89-dc3e67ffad9c"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b84bf34-61e4-4574-bb26-e169782d5868">
+                    <propertyInstance
+                      Id="bbdfe2df-778c-47ef-af21-811867f0b2c4"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="beeaf75e-7d31-4601-b8df-8076aeaf86e3">
+                    <propertyInstance
+                      Id="1dbde651-4e33-4636-ad0a-3b366ae84c54"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="656a9dbd-b714-42da-ab91-09ece39f51dd"
+                LastKnownName="Dictionary&lt;String,Sequence&gt;"
+                LastKnownLocation="Package4_1232.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="c7e05cf3-757e-4824-a03a-5aa5c91fabb0"
+            name="JobCollectionSet"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e8631ee0-e54c-4381-97d9-44fcb449a915"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/src/Flagstaff/Dev/Dev-B/Src/Tools/VMAutomationFramework/JobManagerInterfaces/bin/Debug/JobManagerInterfaces.dll Namespace=JobManagerInterfaces Type=JobCollectionSet Member=(Name=.ctor OverloadingParameters=[(Assembly=file:///C:/Windows/Microsoft.NET/Framework/v2.0.50727/mscorlib.dll Namespace=System.IO Type=DirectoryInfo)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6c40f408-2521-4d48-977f-64d94b2c1f84"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="adcabefc-bc72-4098-bfc9-2cfa786b2af1">
+                    <propertyInstance
+                      Id="cafe62ba-f90d-4905-ac57-d29b729351a4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b0242f7a-c718-4c30-bc03-fab64b6e39be">
+                    <propertyInstance
+                      Id="c3b6ac5c-944b-4004-9eaa-34606c48761b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33d3243f-34bc-4be7-bfcf-146900eb7b61">
+                    <propertyInstance
+                      Id="ee89ba04-5f9a-4ee2-8c73-d2c3136dbe21"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f54c5d17-88e5-45f5-a2d9-d09c9147915c">
+                    <propertyInstance
+                      Id="1e0e5274-7061-48b1-92ec-89710cc9a7b8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cff57917-d776-4453-8cea-40509dc533ae">
+                    <propertyInstance
+                      Id="476112b2-0395-45a4-9b03-04c9453a012f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="da4847f0-64af-400c-b651-03ec21db62fb"
+                  name="rootDirInfo"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b88c11a6-28ad-4429-9916-633777084762"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/src/Flagstaff/Dev/Dev-B/Src/Tools/VMAutomationFramework/JobManagerInterfaces/bin/Debug/JobManagerInterfaces.dll Namespace=JobManagerInterfaces Type=JobCollectionSet Member=(Name=.ctor OverloadingParameters=[(Assembly=file:///C:/Windows/Microsoft.NET/Framework/v2.0.50727/mscorlib.dll Namespace=System.IO Type=DirectoryInfo)]) ParameterIdentifier=rootDirInfo"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="8ba14139-8755-4513-b38b-9875ece98de7"
+                      LastKnownName="DirectoryInfo"
+                      LastKnownLocation="Package2_1232.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fe0228c7-8d65-498d-8b64-010ec7ee3712"
+            name="JobCollectionSet"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1447d3da-f58b-4399-a104-29cd582e74f3"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/src/Flagstaff/Dev/Dev-B/Src/Tools/VMAutomationFramework/JobManagerInterfaces/bin/Debug/JobManagerInterfaces.dll Namespace=JobManagerInterfaces Type=JobCollectionSet Member=(Name=.ctor OverloadingParameters=[(Assembly=file:///C:/Windows/Microsoft.NET/Framework/v2.0.50727/mscorlib.dll Namespace=System.IO Type=FileInfo)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fb2909d6-4d75-42eb-9076-2d628cc746c4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d88b2a0c-494c-477f-a8fe-a7c71f3fe82e">
+                    <propertyInstance
+                      Id="30604952-54f5-4665-9a39-b1177560b8ab"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9324ab18-5f6f-4a94-9153-cc7e8d9f49e2">
+                    <propertyInstance
+                      Id="cd0545e2-a89c-4771-bf16-76f54be35475"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8487789f-3d82-4526-af31-f87313522f23">
+                    <propertyInstance
+                      Id="ebe11290-88d8-4cce-837f-bb35673eaa19"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="07e91835-bf98-4427-8b43-fc03ee973688">
+                    <propertyInstance
+                      Id="e8af2505-1c74-47df-bb4b-a23bc0bf5f49"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a129f537-cf14-4e10-be95-bb4906beda40">
+                    <propertyInstance
+                      Id="79ba8cea-29f5-4550-a5ec-d6fa39f61cf8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="36add8ff-8c5e-42c2-8cbd-65d41b51adb3"
+                  name="jobCollectionFileInfo"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="43841760-695f-49b0-90a1-74aa4e22508a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/src/Flagstaff/Dev/Dev-B/Src/Tools/VMAutomationFramework/JobManagerInterfaces/bin/Debug/JobManagerInterfaces.dll Namespace=JobManagerInterfaces Type=JobCollectionSet Member=(Name=.ctor OverloadingParameters=[(Assembly=file:///C:/Windows/Microsoft.NET/Framework/v2.0.50727/mscorlib.dll Namespace=System.IO Type=FileInfo)]) ParameterIdentifier=jobCollectionFileInfo"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c8ab9c85-496e-4477-837e-2e39e8d94a04"
+                      LastKnownName="FileInfo"
+                      LastKnownLocation="Package2_1232.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e91f87c5-8a43-4d69-917d-2b3452cef9b3"
+            name="CreateJobs"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b3b17aaf-6af7-4c64-a5e8-811052d79cb7"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/src/Flagstaff/Dev/Dev-B/Src/Tools/VMAutomationFramework/JobManagerInterfaces/bin/Debug/JobManagerInterfaces.dll Namespace=JobManagerInterfaces Type=JobCollectionSet Member=(Name=CreateJobs OverloadingParameters=[(Assembly=file:///C:/Windows/Microsoft.NET/Framework/v2.0.50727/mscorlib.dll Namespace=System Type=String)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b911d5c3-ba11-4ce1-8432-c5880644512c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a4a759f5-2f07-4689-9127-7fe59cfe981d">
+                    <propertyInstance
+                      Id="d7c354b4-e6c7-478c-822c-f5364937fca3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9f25701c-99dc-48c8-b6bb-d75d0ae2bfe3">
+                    <propertyInstance
+                      Id="f9ce1e14-bb60-4ae3-82d5-3e0baf199fb5"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bec44d41-5ba3-4346-af26-7408ee47b31f">
+                    <propertyInstance
+                      Id="4987f825-0793-4159-9f68-6cdbd91c95e4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d6840168-9e28-435d-a530-6917116d8b12">
+                    <propertyInstance
+                      Id="5702733c-ddaf-423e-8c4e-3caa7c68b431"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="119f7d1b-ae05-44a6-ae5f-4bbf19a6f1bd">
+                    <propertyInstance
+                      Id="7d9a6b65-af04-4b3a-a652-07b9be4025a3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5246747d-0d43-4d61-951e-4d303f4af4be"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2b5c12db-09a2-418a-9946-239b6e4db796"
+                      LastKnownName="List&lt;Job&gt;"
+                      LastKnownLocation="Package4_1232.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ce26bcc4-6612-44b3-af8b-5ae3ce31ddc6"
+                  name="pathToBuildOutput"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8b7677e7-a1de-4996-9cc2-a54a4aa38016"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/src/Flagstaff/Dev/Dev-B/Src/Tools/VMAutomationFramework/JobManagerInterfaces/bin/Debug/JobManagerInterfaces.dll Namespace=JobManagerInterfaces Type=JobCollectionSet Member=(Name=CreateJobs OverloadingParameters=[(Assembly=file:///C:/Windows/Microsoft.NET/Framework/v2.0.50727/mscorlib.dll Namespace=System Type=String)]) ParameterIdentifier=pathToBuildOutput"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="JobManagerInterfacesModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7e6f388c-595a-4246-889f-6fa9676ab9cc"
+            name="ParseJobCollection"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="41ae7191-ed1e-4acd-b894-71c6611f1da5"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/src/Flagstaff/Dev/Dev-B/Src/Tools/VMAutomationFramework/JobManagerInterfaces/bin/Debug/JobManagerInterfaces.dll Namespace=JobManagerInterfaces Type=JobCollectionSet Member=(Name=ParseJobCollection OverloadingParameters=[(Assembly=file:///C:/Windows/Microsoft.NET/Framework/v2.0.50727/mscorlib.dll Namespace=System.IO Type=FileInfo)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="204d5836-cffa-4ed7-908c-f76bc0663030"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d693b34d-0549-408e-8b73-3e7470e63760">
+                    <propertyInstance
+                      Id="6158956a-2bbb-402b-b825-4f389782ae7c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="96ed7e30-da6c-4e61-9c74-643c49b946c8">
+                    <propertyInstance
+                      Id="e37dbbf9-d956-457e-827e-b6d2197b7460"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e19825ec-06f0-4cf1-864d-dce5d0a7eed6">
+                    <propertyInstance
+                      Id="4f398fd0-2728-4e30-96d4-1128b1f45d3b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7027c48f-ca0a-482d-ad71-d57ebb291401">
+                    <propertyInstance
+                      Id="c96cd089-8b11-45aa-ae7a-b62aa3bdb62b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7a0bcb8d-1f11-4e3c-99e1-4b43ea301d9d">
+                    <propertyInstance
+                      Id="3a39eb76-587d-4be5-a957-141e44e8d1f8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="063682e3-5db0-4603-9590-913cb51e68aa"
+                  name="jobCollectionFile"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d0976be3-09b5-4208-b224-f3ed9970c5d5"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly=file:///C:/src/Flagstaff/Dev/Dev-B/Src/Tools/VMAutomationFramework/JobManagerInterfaces/bin/Debug/JobManagerInterfaces.dll Namespace=JobManagerInterfaces Type=JobCollectionSet Member=(Name=ParseJobCollection OverloadingParameters=[(Assembly=file:///C:/Windows/Microsoft.NET/Framework/v2.0.50727/mscorlib.dll Namespace=System.IO Type=FileInfo)]) ParameterIdentifier=jobCollectionFile"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c8ab9c85-496e-4477-837e-2e39e8d94a04"
+                      LastKnownName="FileInfo"
+                      LastKnownLocation="Package2_1232.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="39e75af9-61d1-447b-9b93-48c2ef1a3c18"
+            name="JobCollectionSet"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="749cf1a7-d36d-46bf-979c-b7f7bd765883"
+                handle="viewcode://./CodeSchema_Method?Assembly=file:///C:/src/Flagstaff/Dev/Dev-B/Src/Tools/VMAutomationFramework/JobManagerInterfaces/bin/Debug/JobManagerInterfaces.dll Namespace=JobManagerInterfaces Type=JobCollectionSet Member=.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a745e81c-6f7a-4cbb-9deb-8e4132be8918"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8bfa00c2-1ef7-4502-9d29-6b904382e51c">
+                    <propertyInstance
+                      Id="fb6825c8-2cd4-4e7c-a947-764bffdd066b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7b6b656-1b6a-44cb-ba01-75a5b60c7db2">
+                    <propertyInstance
+                      Id="f4c67504-6ec4-4702-b390-6f6e7736f6c0"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="97c1c67d-1deb-457b-9b3f-9c05344c1dd1">
+                    <propertyInstance
+                      Id="838624cb-1ec0-4f46-aa5a-9e76bc2afcf6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cd814d2f-dc1b-47ef-a847-fb4ed59bca00">
+                    <propertyInstance
+                      Id="f83d5a84-ab7c-4a96-8726-d4f0e561cf2c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="315bd0d2-6b21-427f-8d47-ea36e2547ec8">
+                    <propertyInstance
+                      Id="f85a89cc-64fd-47e2-beaa-8947148953af"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="20b6568e-a4d8-459f-a3f3-0e4661603c2f"
+        name="Job"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="b64bdbe8-5967-4a1a-aee9-1bd347309926"
+            handle="viewcode://./CodeSchema_Class?Assembly=file:///C:/src/Flagstaff/Dev/Dev-B/Src/Tools/VMAutomationFramework/JobManagerInterfaces/bin/Debug/JobManagerInterfaces.dll Namespace=JobManagerInterfaces Type=Job"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="fd31c7c8-14a9-4bfe-99c4-8995cd182eda"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="98952174-dfbe-46b5-9b79-4c4910c3f429">
+                <propertyInstance
+                  Id="f78d125b-5f36-4afe-8466-6e5bc03e8c5b"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e23d084a-b24b-4b8a-a5d7-968f389f0e23">
+                <propertyInstance
+                  Id="d66fff84-55ac-4a29-a504-b18bbfd046c0"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="eb62818a-5672-487d-ab22-b05b2fca9073">
+                <propertyInstance
+                  Id="150d8bdc-cad5-4afa-8382-5fe65df1eb07"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="79125aa8-1929-42d1-a031-e7c49ecbfbd4">
+                <propertyInstance
+                  Id="56255ed6-660b-4001-991b-903ef1a614cb"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="056d6afe-589b-4330-a335-930aca9d5f5c">
+                <propertyInstance
+                  Id="1e68a2fe-5f84-4f05-83af-607f6cb9318a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="4eb4a268-8500-41a5-902a-a9400dbe363f"
+        LastKnownName="XML"
+        LastKnownLocation="Package5_1232.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

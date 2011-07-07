@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.rbadams.com/Automation/JobCollection" elementFormDefault="qualified"
+    xmlns:tns="http://www.rbadams.com/Automation/JobCollection">
+    <xs:complexType name="JobCollection">
+        <xs:sequence>
+          <xs:element name="Job" minOccurs="1" maxOccurs="unbounded">
+            <xs:complexType mixed="true">
+              <xs:attribute name="DependsOn" type="xs:string" use="optional"/>
+              <xs:attribute name="JobPath" type="xs:string" use="required"/>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="JobCollection" type="tns:JobCollection"/>
+</xs:schema>
+ 
