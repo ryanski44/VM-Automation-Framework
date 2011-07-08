@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Job xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.rbadams.com/Automation/Job"
+    xsi:schemaLocation="http://www.rbadams.com/Automation/DeploymentConfig ../../../src/JobManagerInterfaces/schema/Job.xsd">
+  <Configurations>
+    <Configuration>Configurations\7_HP_32.xml</Configuration>
+    <Configuration>Configurations\7_HP_64.xml</Configuration>
+    <Configuration>Configurations\XP_PRO_SP3_32_NET.xml</Configuration>
+  </Configurations>
+  <ISOs>
+    <ISO Key="Main" Target="ISOs\YourAppIso.xml"/>
+    <ISO Key="XP_PRO" Target="ISOs\XP_PRO.xml"/>
+  </ISOs>
+  <ExecutableSequence>Sequences\Example.xml</ExecutableSequence>
+  <Properties>
+    <Property Key="ShutdownAfterTests" Value="true"/>
+  </Properties>
+</Job>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration xmlns="http://www.rbadams.com/Automation/Configuration"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.rbadams.com/Automation/Configuration ../../../src/JobManagerInterfaces/schema/Configuration.xsd" 
+    VM="7_HP_32">
+    <Properties>
+        <Property Key="Config_NUnitCategories" Value="7_HP_32"/>
+    </Properties>
+</Configuration>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://www.rbadams.com/Automation/Package"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.rbadams.com/Automation/Package ../../../src/JobManagerInterfaces/schema/Package.xsd">
+    <MainDirectory Path="Tests\Automation\ETP\RunBVTTests\bin\Release" PathType="BuildRelative"/>
+    <AdditionalSubDirectories>
+      <SubDirectory Name="InstallerTest" Path="Tests\Installation\InstallerTest\bin\Release" PathType="BuildRelative"/>
+    </AdditionalSubDirectories>
+    <DLLFileName>RunBVTTests.dll</DLLFileName>
+    <JobRunnerClassName>RunBVTTests.Main</JobRunnerClassName>
+    <RequiredJobProperties/>
+    <Properties>
+      <Property Key="Tests" Value="InstallerTest\InstallerTest.dll"/>
+      <Property Key="Package_NUnitCategories" Value="uninstall"/>
+      <Property Key="ExcludeConfigurationCategories" Value="true"/>
+      <Property Key="ExcludeJobCategories" Value="true"/>
+    </Properties>
+    <RequiredISOs />
+</Package>

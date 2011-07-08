@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JobCollection xmlns="http://www.rbadams.com/Automation/JobCollection"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.rbadams.com/Automation/JobCollection ../../src/JobManagerInterfaces/schema/JobCollection.xsd">
+  <Job JobPath="Jobs\Full\Nominal.xml" />
+  <Job JobPath="Jobs\Full\InstallParams.xml" />
+</JobCollection>

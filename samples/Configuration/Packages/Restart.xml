@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://www.rbadams.com/Automation/Package"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.rbadams.com/Automation/Package ../../../src/JobManagerInterfaces/schema/Package.xsd">
+    <MainDirectory Path="Tests\Automation\ETP\Restart\bin\Release" PathType="BuildRelative"/>
+    <AdditionalSubDirectories/>
+    <DLLFileName>Restart.dll</DLLFileName>
+    <JobRunnerClassName>Restart.Main</JobRunnerClassName>
+    <RequiredJobProperties />
+    <Properties/>
+    <RequiredISOs />
+</Package>

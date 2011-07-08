@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://www.rbadams.com/Automation/Package"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.rbadams.com/Automation/Package ../../../src/JobManagerInterfaces/schema/Package.xsd">
+    <MainDirectory Path="Tests\Automation\ETP\RunBVTTests\bin\Release" PathType="BuildRelative"/>
+    <AdditionalSubDirectories>
+      <SubDirectory Name="SomeTestPackage" Path="Tests\SomeTestPackage\bin\Release" PathType="BuildRelative"/>
+	  <SubDirectory Name="SomeOtherTestPackage" Path="Tests\SomeOtherTestPackage\bin\Release" PathType="BuildRelative"/>
+    </AdditionalSubDirectories>
+    <DLLFileName>RunBVTTests.dll</DLLFileName>
+    <JobRunnerClassName>RunBVTTests.Main</JobRunnerClassName>
+    <RequiredJobProperties/>
+    <Properties>
+      <!-- Allow Tests up to 60 minutes to run -->
+      <Property Key="testTimeoutMin" Value="60"/>
+      <Property Key="Tests" Value="SomeTestPackage\SomeTest.dll;SomeOtherTestPackage\SomeOtherTest.dll"/>
+      <Property Key="Package_NUnitCategories" Value="nominal"/>
+      <Property Key="TreatFailedTestsAsPackageFailure" Value="true"/>
+    </Properties>
+    <RequiredISOs />
+</Package>

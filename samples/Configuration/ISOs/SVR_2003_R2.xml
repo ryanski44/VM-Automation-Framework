@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ISO xmlns="http://www.rbadams.com/Automation/ISO"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.rbadams.com/Automation/ISO ../../../src/JobManagerInterfaces/schema/ISO.xsd" 
+    Path="\\somepathtowindowsisos\en_win_srv_2003_r2_standard_x64_with_sp2_cd1_X13-05757.iso" PathType="Absolute"/>

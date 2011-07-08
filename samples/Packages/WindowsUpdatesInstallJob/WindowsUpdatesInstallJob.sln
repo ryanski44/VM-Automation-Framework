@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7A15E378-9BBA-44A7-8D5C-CC1BCCAC8C6D}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+		WindowsUpdatesInstallJob.vsmdi = WindowsUpdatesInstallJob.vsmdi
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsUpdatesInstallJob", "WindowsUpdatesInstallJob.csproj", "{20AABFDA-A919-472F-B8F8-83ED957DB70A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobManagerInterfaces", "..\..\..\src\JobManagerInterfaces\JobManagerInterfaces.csproj", "{B757FB2B-4F10-41D7-A604-662A24AB5919}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = WindowsUpdatesInstallJob.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20AABFDA-A919-472F-B8F8-83ED957DB70A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20AABFDA-A919-472F-B8F8-83ED957DB70A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20AABFDA-A919-472F-B8F8-83ED957DB70A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20AABFDA-A919-472F-B8F8-83ED957DB70A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B757FB2B-4F10-41D7-A604-662A24AB5919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B757FB2B-4F10-41D7-A604-662A24AB5919}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B757FB2B-4F10-41D7-A604-662A24AB5919}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B757FB2B-4F10-41D7-A604-662A24AB5919}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

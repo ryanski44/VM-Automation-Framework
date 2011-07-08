@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration xmlns="http://www.rbadams.com/Automation/Configuration"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.rbadams.com/Automation/Configuration ../../../src/JobManagerInterfaces/schema/Configuration.xsd" 
+    VM="XP_PRO_SP3_32_NET">
+    <Properties>
+      <Property Key="Config_NUnitCategories" Value="XP_PRO_SP3_32_NET;DotNet35Base;NoPowerShell;Installer4.5.6001.22159;PreWindowsInstaller45"/>
+    </Properties>
+</Configuration>

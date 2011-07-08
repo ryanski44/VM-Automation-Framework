@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Sequence xmlns="http://www.rbadams.com/Automation/Sequence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.rbadams.com/Automation/Sequence ../../../src/JobManagerInterfaces/schema/Sequence.xsd">
+  <Package>Packages\InstallApp.xml</Package>
+  <Package>Packages\RunNominalTests.xml</Package>
+  <Package>Packages\Restart.xml</Package>
+  <Package>Packages\RunPostRestartTests.xml</Package>
+  <Package>Packages\UninstallApp.xml</Package>
+  <Package>Packages\RunUninstallTests.xml</Package>
+</Sequence>

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunBVTTests", "RunBVTTests.csproj", "{159CCDC3-CDF1-4DB1-8932-9E91E912D362}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobManagerInterfaces", "..\..\..\src\JobManagerInterfaces\JobManagerInterfaces.csproj", "{B757FB2B-4F10-41D7-A604-662A24AB5919}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessUtilities", "..\ProcessUtilities\ProcessUtilities.csproj", "{EA5F3CA1-4109-40B9-B112-EC13055E5E27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{159CCDC3-CDF1-4DB1-8932-9E91E912D362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{159CCDC3-CDF1-4DB1-8932-9E91E912D362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{159CCDC3-CDF1-4DB1-8932-9E91E912D362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{159CCDC3-CDF1-4DB1-8932-9E91E912D362}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B757FB2B-4F10-41D7-A604-662A24AB5919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B757FB2B-4F10-41D7-A604-662A24AB5919}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B757FB2B-4F10-41D7-A604-662A24AB5919}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B757FB2B-4F10-41D7-A604-662A24AB5919}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA5F3CA1-4109-40B9-B112-EC13055E5E27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA5F3CA1-4109-40B9-B112-EC13055E5E27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA5F3CA1-4109-40B9-B112-EC13055E5E27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA5F3CA1-4109-40B9-B112-EC13055E5E27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
